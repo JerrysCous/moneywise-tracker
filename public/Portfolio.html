@@ -1,0 +1,95 @@
+<!-- public/portfolio.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Portfolio - MoneyWise</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+    <!-- Header and navigation similar to dashboard.html -->
+
+    <div class="dashboard-layout">
+        <!-- Sidebar similar to dashboard.html -->
+
+        <main class="main-content">
+            <section id="portfolio" class="content-section active">
+                <h1>Financial Portfolio</h1>
+
+                <div class="portfolio-summary">
+                    <div class="net-worth-card">
+                        <h2>Net Worth</h2>
+                        <div class="net-worth-amount">$12,450.00</div>
+                        <div class="net-worth-change positive">+$450.00 this month</div>
+                    </div>
+
+                    <div class="portfolio-stats">
+                        <div class="stat-card">
+                            <h3>Assets</h3>
+                            <p class="stat-value">$15,200.00</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Liabilities</h3>
+                            <p class="stat-value expense">$2,750.00</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Savings Rate</h3>
+                            <p class="stat-value">24%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-charts">
+                    <div class="chart-container">
+                        <h2>Asset Allocation</h2>
+                        <canvas id="assetAllocationChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h2>Net Worth Trend</h2>
+                        <canvas id="netWorthTrendChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="portfolio-accounts">
+                    <h2>Accounts</h2>
+                    <div class="accounts-grid">
+                        <div class="account-card">
+                            <div class="account-icon"><i class="fas fa-university"></i></div>
+                            <div class="account-details">
+                                <h3>Checking Account</h3>
+                                <p class="account-balance">$2,450.00</p>
+                            </div>
+                        </div>
+                        <div class="account-card">
+                            <div class="account-icon"><i class="fas fa-piggy-bank"></i></div>
+                            <div class="account-details">
+                                <h3>Savings Account</h3>
+                                <p class="account-balance">$8,750.00</p>
+                            </div>
+                        </div>
+                        <div class="account-card">
+                            <div class="account-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="account-details">
+                                <h3>Investment Account</h3>
+                                <p class="account-balance">$4,000.00</p>
+                            </div>
+                        </div>
+                        <div class="account-card">
+                            <div class="account-icon"><i class="fas fa-credit-card"></i></div>
+                            <div class="account-details">
+                                <h3>Credit Card</h3>
+                                <p class="account-balance expense">-$750.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../js/portfolio.js"></script>
+</body>
+</html>

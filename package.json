@@ -4,8 +4,25 @@
   "description": "Personal Finance Tracker with Premium Features",
   "main": "index.html",
   "scripts": {
-    "start": "http-server -p 3000 -o"
+    "start": "http-server -p 3000 -o -c-1"
   },
-  "author": "Creed",
-  "license": "MIT"
+  "keywords": [
+    "finance",
+    "budget",
+    "tracker",
+    "money",
+    "personal-finance",
+    "expense-tracker"
+  ],
+  "author": "JerrysCous",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JerrysCous/moneywise-tracker.git"
+  },
+  "homepage": "https://JerrysCous.github.io/moneywise-tracker",
+  "bugs": {
+    "url": "https://github.com/JerrysCous/moneywise-tracker/issues"
+  }
 }
+
