@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - MoneyWise</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <!-- Dashboard Header -->
+    <header class="dashboard-header">
+        <div class="header-left">
+            <div class="nav-brand">
+                <i class="fas fa-chart-line"></i>
+                <span>MoneyWise</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <span id="userPlan" class="plan-badge">FREE PLAN</span>
+            <button id="upgradeBtn" class="btn-upgrade">
+                <i class="fas fa-crown"></i> Upgrade
+            </button>
+        </div>
+    </header>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="dashboard.html#transactions" class="nav-item">
+                    <i class="fas fa-list"></i>
+                    <span>Transactions</span>
+                </a>
+                <a href="#" class="nav-item premium-locked" data-section="budgets">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Budget Goals</span>
+                    <i class="fas fa-crown premium-icon"></i>
+                </a>
+                <a href="portfolio.html" class="nav-item">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Portfolio</span>
+                </a>
+                <div class="sidebar-divider"></div>
+                <a href="profile.html" class="nav-item active">
+                    <i class="fas fa-user"></i>
+                    <span>My Profile</span>
+                </a>
+                <a href="../index.html" class="nav-item">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <section class="content-section active">
+                <h1>My Profile</h1>
+
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="profile-info">
+                            <h2 id="profileName">John Doe</h2>
+                            <p id="profileEmail">john.doe@example.com</p>
+                            <div class="profile-stats">
+                                <div class="profile-stat">
+                                    <span class="stat-label">Member Since</span>
+                                    <span class="stat-value" id="memberSince">June 2023</span>
+                                </div>
+                                <div class="profile-stat">
+                                    <span class="stat-label">Subscription</span>
+                                    <span class="stat-value" id="subscriptionStatus">Free Plan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-tabs">
+                        <button class="tab-btn active" data-tab="personal-info">Personal Info</button>
+                        <button class="tab-btn" data-tab="financial-summary">Financial Summary</button>
+                        <button class="tab-btn" data-tab="preferences">Preferences</button>
+                    </div>
+
+                    <div class="tab-content active" id="personal-info">
+                        <div class="settings-card">
+                            <h3>Personal Information</h3>
+                            <form id="personalInfoForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="fullName">Full Name</label>
+                                        <input type="text" id="fullName" value="John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="profileEmail">Email</label>
+                                        <input type="email" id="profileEmailInput" value="john.doe@example.com">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="phoneNumber">Phone Number</label>
+                                        <input type="tel" id="phoneNumber" placeholder="(123) 456-7890">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dateOfBirth">Date of Birth</label>
+                                        <input type="date" id="dateOfBirth">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-primary">Save Changes</button>
+                            </form>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Change Password</h3>
+                            <form id="changePasswordForm">
+                                <div class="form-group">
+                                    <label for="currentPassword">Current Password</label>
+                                    <input type="password" id="currentPassword">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="newPassword">New Password</label>
+                                        <input type="password" id="newPassword">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirmPassword">Confirm New Password</label>
+                                        <input type="password" id="confirmPassword">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-primary">Update Password</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="financial-summary">
+                        <div class="financial-overview">
+                            <div class="overview-card">
+                                <h3>Net Worth</h3>
+                                <div class="overview-value">$12,450</div>
+                                <a href="portfolio.html" class="btn-secondary">View Portfolio</a>
+                            </div>
+
+                            <div class="overview-card">
+                                <h3>Monthly Savings</h3>
+                                <div class="overview-value">$450</div>
+                                <div class="overview-change positive">+12% from last month</div>
+                            </div>
+
+                            <div class="overview-card">
+                                <h3>Top Spending Category</h3>
+                                <div class="overview-value">Housing</div>
+                                <div class="overview-detail">$800 this month</div>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Financial Goals Progress</h3>
+                            <div class="goals-summary">
+                                <div class="goal-progress-item">
+                                    <div class="goal-info">
+                                        <h4>Emergency Fund</h4>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="goal-stats">
+                                        <span>$6,500 / $10,000</span>
+                                        <span>65%</span>
+                                    </div>
+                                </div>
+
+                                <div class="goal-progress-item">
+                                    <div class="goal-info">
+                                        <h4>Vacation Fund</h4>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 30%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="goal-stats">
+                                        <span>$900 / $3,000</span>
+                                        <span>30%</span>
+                                    </div>
+                                </div>
+
+                                <a href="goals.html" class="btn-secondary">Manage All Goals</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="preferences">
+                        <div class="settings-card">
+                            <h3>App Settings</h3>
+                            <div class="settings-options">
+                                <div class="settings-option">
+                                    <div class="option-info">
+                                        <h4>Dark Mode</h4>
+                                        <p>Switch between light and dark theme</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" id="darkModeToggle">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+
+                                <div class="settings-option">
+                                    <div class="option-info">
+                                        <h4>Email Notifications</h4>
+                                        <p>Receive updates and alerts via email</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" id="emailNotificationsToggle" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+
+                                <div class="settings-option">
+                                    <div class="option-info">
+                                        <h4>Budget Alerts</h4>
+                                        <p>Get notified when approaching budget limits</p>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox" id="budgetAlertsToggle" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-card">
+                            <h3>Currency & Format</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="currencySelect">Currency</label>
+                                    <select id="currencySelect">
+                                        <option value="USD" selected>USD ($)</option>
+                                        <option value="EUR">EUR (€)</option>
+                                        <option value="GBP">GBP (£)</option>
+                                        <option value="CAD">CAD ($)</option>
+                                        <option value="AUD">AUD ($)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dateFormatSelect">Date Format</label>
+                                    <select id="dateFormatSelect">
+                                        <option value="MM/DD/YYYY" selected>MM/DD/YYYY</option>
+                                        <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+                                        <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn-primary" id="savePreferencesBtn">Save Preferences</button>
+                        </div>
+
+                        <div class="settings-card danger-zone">
+                            <h3>Danger Zone</h3>
+                            <div class="danger-actions">
+                                <div class="danger-action">
+                                    <div class="danger-info">
+                                        <h4>Clear All Data</h4>
+                                        <p>Delete all your transactions and financial data</p>
+                                    </div>
+                                    <button class="btn-danger" id="clearDataBtn">Clear Data</button>
+                                </div>
+                                <div class="danger-action">
+                                    <div class="danger-info">
+                                        <h4>Delete Account</h4>
+                                        <p>Permanently delete your account and all data</p>
+                                    </div>
+                                    <button class="btn-danger" id="deleteAccountBtn">Delete Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Confirmation Modals -->
+    <div id="clearDataModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            <h2>Clear All Data</h2>
+            <p>Are you sure you want to delete all your transactions and data? This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button class="btn-secondary" id="cancelClearBtn">Cancel</button>
+                <button class="btn-danger" id="confirmClearBtn">Clear All Data</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteAccountModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            <h2>Delete Account</h2>
+            <p>Are you sure you want to permanently delete your account? All your data will be lost and this action cannot be undone.</p>
+            <div class="form-group">
+                <label for="deleteConfirmation">Type "DELETE" to confirm</label>
+                <input type="text" id="deleteConfirmation">
+            </div>
+            <div class="modal-actions">
+                <button class="btn-secondary" id="cancelDeleteAccountBtn">Cancel</button>
+                <button class="btn-danger" id="confirmDeleteAccountBtn" disabled>Delete Account</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/profile.js"></script>
+</body>
+</html>

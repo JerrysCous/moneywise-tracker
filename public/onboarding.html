@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started - MoneyWise</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="onboarding-body">
+    <div class="onboarding-container">
+        <div class="onboarding-sidebar">
+            <div class="onboarding-logo">
+                <i class="fas fa-chart-line"></i>
+                <span>MoneyWise</span>
+            </div>
+            <div class="onboarding-steps">
+                <div class="step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-info">
+                        <h3>Create Account</h3>
+                        <p>Set up your login details</p>
+                    </div>
+                </div>
+                <div class="step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-info">
+                        <h3>Financial Profile</h3>
+                        <p>Tell us about your finances</p>
+                    </div>
+                </div>
+                <div class="step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-info">
+                        <h3>Goals & Preferences</h3>
+                        <p>What do you want to achieve?</p>
+                    </div>
+                </div>
+                <div class="step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-info">
+                        <h3>Complete Setup</h3>
+                        <p>You're all set!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="onboarding-content">
+            <!-- Step 1: Create Account -->
+            <div class="onboarding-step active" id="step1">
+                <h1>Create Your Account</h1>
+                <p>Let's get started with your free MoneyWise account.</p>
+
+                <form class="onboarding-form" id="createAccountForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" required>
+                        </div>
+                    </div>
+                    <div class="onboarding-navigation">
+                        <div></div> <!-- Empty div for spacing -->
+                        <button type="button" class="btn-primary next-step" data-next="2">Continue</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 2: Financial Profile -->
+            <div class="onboarding-step" id="step2">
+                <h1>Your Financial Profile</h1>
+                <p>Help us understand your financial situation so we can personalize your experience.</p>
+
+                <form class="onboarding-form">
+                    <div class="question-group">
+                        <h3>What's your primary financial goal?</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="financialGoal" value="save" checked>
+                                <span>Save more money</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="financialGoal" value="budget">
+                                <span>Better budget management</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="financialGoal" value="debt">
+                                <span>Pay off debt</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="financialGoal" value="invest">
+                                <span>Start investing</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <h3>What's your monthly income?</h3>
+                        <div class="form-group">
+                            <input type="number" id="monthlyIncome" placeholder="0.00" step="0.01" required>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <h3>How would you describe your financial knowledge?</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="financialKnowledge" value="beginner" checked>
+                                <span>Beginner - I'm just starting to learn</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="financialKnowledge" value="intermediate">
+                                <span>Intermediate - I understand the basics</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="financialKnowledge" value="advanced">
+                                <span>Advanced - I'm financially savvy</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="onboarding-navigation">
+                        <button type="button" class="btn-secondary prev-step" data-prev="1">Back</button>
+                        <button type="button" class="btn-primary next-step" data-next="3">Continue</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 3: Goals & Preferences -->
+            <div class="onboarding-step" id="step3">
+                <h1>Goals & Preferences</h1>
+                <p>Let's customize MoneyWise to fit your needs.</p>
+
+                <form class="onboarding-form">
+                    <div class="question-group">
+                        <h3>Which areas do you want to focus on?</h3>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="focus" value="expenses" checked>
+                                <span>Track daily expenses</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="focus" value="budget">
+                                <span>Create and manage budgets</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="focus" value="savings">
+                                <span>Set savings goals</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="focus" value="investments">
+                                <span>Track investments</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" name="focus" value="reports">
+                                <span>Generate financial reports</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="question-group">
+                        <h3>How often do you want to review your finances?</h3>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="reviewFrequency" value="daily" checked>
+                                <span>Daily</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="reviewFrequency" value="weekly">
+                                <span>Weekly</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="reviewFrequency" value="monthly">
+                                <span>Monthly</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currency">Preferred Currency</label>
+                        <select id="currency">
+                            <option value="USD" selected>USD ($)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="GBP">GBP (£)</option>
+                            <option value="CAD">CAD ($)</option>
+                            <option value="AUD">AUD ($)</option>
+                        </select>
+                    </div>
+
+                    <div class="onboarding-navigation">
+                        <button type="button" class="btn-secondary prev-step" data-prev="2">Back</button>
+                        <button type="button" class="btn-primary next-step" data-next="4">Complete Setup</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Step 4: Complete -->
+            <div class="onboarding-step" id="step4">
+                <div class="completion-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>You're All Set!</h2>
+                    <p>Your MoneyWise account has been created successfully.</p>
+                    <a href="dashboard.html" class="btn-hero">Go to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/onboarding.js"></script>
+</body>
+</html>
