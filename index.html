@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoneyWise - Personal Finance Tracker</title>
+    <meta name="description" content="Take control of your finances with MoneyWise - Free expense tracking with premium features">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-chart-line"></i>
+                <span>MoneyWise</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <button id="getStartedBtn" class="btn-primary">Get Started Free</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Take Control of Your Finances</h1>
+            <p>Track expenses, set budgets, and achieve your financial goals with MoneyWise</p>
+            <button id="startFreeBtn" class="btn-hero">Start Free Today</button>
+            <p class="hero-note">No credit card required • Upgrade anytime for $3/month</p>
+        </div>
+        <div class="hero-visual">
+            <div class="dashboard-mockup">
+                <div class="mockup-header">
+                    <div class="mockup-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="mockup-content">
+                    <h3>Monthly Overview</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p>$1,250 / $2,000 spent</p>
+                    <div class="mockup-transactions">
+                        <div class="mockup-transaction">
+                            <div class="mock-icon food">🍔</div>
+                            <div class="mock-details">
+                                <span>Groceries</span>
+                                <span class="mock-date">Today</span>
+                            </div>
+                            <div class="mock-amount">-$85.20</div>
+                        </div>
+                        <div class="mockup-transaction">
+                            <div class="mock-icon transport">🚗</div>
+                            <div class="mock-details">
+                                <span>Gas</span>
+                                <span class="mock-date">Yesterday</span>
+                            </div>
+                            <div class="mock-amount">-$45.00</div>
+                        </div>
+                        <div class="mockup-transaction">
+                            <div class="mock-icon income">💰</div>
+                            <div class="mock-details">
+                                <span>Paycheck</span>
+                                <span class="mock-date">Sep 5</span>
+                            </div>
+                            <div class="mock-amount income">+$1,200.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Features</h2>
+            <div class="features-grid">
+                <div class="feature-card free">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Expense Tracking</h3>
+                    <p>Easily log and categorize your daily expenses</p>
+                    <span class="badge free-badge">FREE</span>
+                </div>
+                <div class="feature-card free">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Basic Reports</h3>
+                    <p>View simple spending summaries and monthly totals</p>
+                    <span class="badge free-badge">FREE</span>
+                </div>
+                <div class="feature-card free">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Sync</h3>
+                    <p>Access your data from any device with cloud storage</p>
+                    <span class="badge free-badge">FREE</span>
+                </div>
+                <div class="feature-card premium">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Budget Goals</h3>
+                    <p>Set and track budget limits by category</p>
+                    <span class="badge premium-badge">PREMIUM</span>
+                </div>
+                <div class="feature-card premium">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Detailed insights and spending pattern analysis</p>
+                    <span class="badge premium-badge">PREMIUM</span>
+                </div>
+                <div class="feature-card premium">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-export"></i>
+                    </div>
+                    <h3>Export Data</h3>
+                    <p>Download reports as PDF or CSV files</p>
+                    <span class="badge premium-badge">PREMIUM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">$0<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Basic expense tracking</li>
+                        <li><i class="fas fa-check"></i> Simple reports</li>
+                        <li><i class="fas fa-check"></i> Up to 50 transactions/month</li>
+                        <li><i class="fas fa-check"></i> Cloud sync</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Budget goals</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Advanced analytics</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Export capabilities</li>
+                    </ul>
+                    <button class="btn-pricing" id="startFreePricingBtn">Start Free</button>
+                </div>
+                <div class="pricing-card premium-card">
+                    <div class="popular-tag">Most Popular</div>
+                    <h3>Premium</h3>
+                    <div class="price">$3<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Free</li>
+                        <li><i class="fas fa-check"></i> <strong>Unlimited</strong> transactions</li>
+                        <li><i class="fas fa-check"></i> Budget goals & alerts</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Export capabilities</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <button class="btn-pricing premium" id="startPremiumBtn">Get Premium</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"MoneyWise helped me save over $500 in the first month by showing me where my money was going. The budget alerts are a game-changer!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <h4>John D.</h4>
+                            <p>Premium User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"I've tried many finance apps, but MoneyWise is by far the easiest to use. The free version has everything I need to stay on top of my expenses."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah M.</h4>
+                            <p>Free User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The analytics in the premium version are worth every penny. I can finally understand my spending patterns and make better financial decisions."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RJ</div>
+                        <div class="author-info">
+                            <h4>Robert J.</h4>
+                            <p>Premium User</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Take Control of Your Finances?</h2>
+            <p>Join thousands of users who are saving money with MoneyWise</p>
+            <button id="finalCTABtn" class="btn-hero">Get Started Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <i class="fas fa-chart-line"></i>
+                        <span>MoneyWise</span>
+                    </div>
+                    <p>Simple, powerful finance tracking</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">Security</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 MoneyWise. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
